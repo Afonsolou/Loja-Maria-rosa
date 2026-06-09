@@ -45,11 +45,6 @@ nav ul{
 nav img{
     width: 100px;
 }
-.caixas{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-}
 main{
     background-color: #F8ECEE;
     padding-right: 60px;
