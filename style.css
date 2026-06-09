@@ -1,0 +1,174 @@
+body{
+    margin:0%;
+    overflow-x: hidden;
+    background: linear-gradient(90deg, #060B18, #0B1530);
+    color: #D9B08C;
+}
+.container{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    min-height: 100vh;
+}
+header{
+    color: #D9B08C;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.5) 25%,
+            rgba(0, 0, 0, 0) 60%
+        ),
+        url("img/8360dfbd-4edb-4070-990c-e2c001059fe5.jpeg");
+    text-align: center;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #F5E8E4;
+    padding: 10px;
+    z-index: 9999;
+}
+nav ul{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav img{
+    width: 100px;
+}
+.caixas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+main{
+    background-color: #F8ECEE;
+    padding-right: 60px;
+    padding-left: 60px;
+    color: #6B4F4F;
+}
+footer{
+    background-color: black;
+    color: #A8B5A2;;
+    padding: 0px;
+}
+footer p{
+    text-align: center;
+}
+a{
+    transition: color 0.3s ease;
+    color: #6B4F4F;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    color: #A8B5A2;
+}
+h1{
+    padding-top: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-clip: text;
+}
+h2{
+    text-align: left;
+}
+.ativo{
+    color: #A8B5A2;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+img{
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+p{
+    text-align: left;
+}
+iframe{
+    display: block;
+    margin: 0 auto;
+}
+figcaption{
+    color: black;
+    margin-top: -18px;
+    text-align: center;
+}
+figcaption a{
+    color: red;
+}
+legend{
+    text-align: center;
+    color: black;
+}
+#centralizado{
+    text-align: center;
+}
+.grupo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+.produto {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.produto img {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    transition: opacity 0.3s linear;
+}
+
+/* Imagem inicial */
+.img-principal {
+    opacity: 1;
+}
+
+/* Imagem que aparece no hover */
+.img-hover {
+    opacity: 0;
+}
+
+/* Ao passar o mouse */
+.img-principal:hover {
+    opacity: 0;
+}
+
+.img-hover:hover {
+    opacity: 1;
+}
+.info-produto{
+    text-align: center;
+    padding-top: 250px;
+}
+
+.info-produto h3{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #060B18;
+}
+
+.preco{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #944e18;
+}
