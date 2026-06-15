@@ -1,8 +1,20 @@
+/* ===================================================================
+   Boutique Maria Rosa - Folha de estilos
+   Ajustada às diretrizes de UX:
+   - Escala tipográfica (H1 32-40 / H2 24-28 / Body 16 / Footer 12-14)
+   - Contraste e cores (sem preto puro em texto longo; cinza #1A1A1A)
+   - Alinhamento (parágrafos à esquerda; títulos curtos centralizados)
+   - Line-height de leitura entre 1.4 e 1.6
+=================================================================== */
+
 body{
     margin:0%;
     overflow-x: hidden;
     background: linear-gradient(90deg, #060B18, #0B1530);
     color: #D9B08C;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;        /* Body mínimo p/ acessibilidade */
+    line-height: 1.5;       /* Entre 1.4 e 1.6 p/ leitura */
 }
 .container{
     display: grid;
@@ -31,17 +43,16 @@ nav{
     top: 0;
     left: 0;
     background-color: #F5E8E4;
-    padding: 2px;
+    padding: 10px;
     z-index: 9999;
 }
 nav ul{
     display: flex;
-    gap: 5rem;
-    align-items: center;
+    gap: 100px;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    white-space: nowrap;
 }
 nav img{
     width: 100px;
@@ -50,15 +61,18 @@ main{
     background-color: #F8ECEE;
     padding-right: 60px;
     padding-left: 60px;
-    color: #6B4F4F;
+    padding-bottom: 60px;
+    color: #4A3B3B;          /* Cinza-marrom escuro, não preto puro */
 }
 footer{
-    background-color: #8F5543;
-    color: black;
-    padding: 0px;
+    background-color: black;
+    color: #A8B5A2;
+    padding: 10px 0;
 }
 footer p{
-    text-align: center;
+    text-align: center;      /* Texto curto: centralizar é permitido */
+    font-size: 13px;         /* Footer entre 12 e 14px */
+    margin: 0;
 }
 a{
     transition: color 0.3s ease;
@@ -68,18 +82,22 @@ a{
     font-weight: bold;
 }
 a:hover{
-    color: #A8B5A2;
+    color: #5a6b54;          /* Verde mais escuro p/ contraste suficiente */
 }
 h1{
     padding-top: 40px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;         /* H1 entre 32 e 40px */
     background-clip: text;
 }
 h2{
-    text-align: left;
+    text-align: left;        /* Subtítulo de seção alinhado à esquerda */
+    font-size: 26px;         /* H2 entre 24 e 28px */
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 .ativo{
-    color: #A8B5A2;
+    color: #5a6b54;
     font-weight: bold;
     padding-bottom: 5px;
 }
@@ -89,38 +107,50 @@ img{
     margin: 0 auto;
 }
 p{
-    text-align: left;
+    text-align: left;        /* Parágrafos sempre à esquerda (âncora do olho) */
+    line-height: 1.6;        /* Conforto de leitura */
 }
 iframe{
     display: block;
     margin: 0 auto;
 }
 figcaption{
-    color: black;
+    color: #1A1A1A;          /* Cinza-escuro em vez de preto puro */
     margin-top: -18px;
-    text-align: center;
+    text-align: center;      /* Legenda curta: centralizada */
 }
 figcaption a{
-    color: red;
+    color: #b3261e;          /* Vermelho um pouco mais escuro p/ contraste */
 }
 legend{
     text-align: center;
-    color: black;
+    color: #1A1A1A;
 }
 #centralizado{
-    text-align: center;
+    text-align: center;      /* Título curto de seção: centralizado é ok */
 }
+/* Grid responsivo: ajusta o número de colunas conforme a largura da tela */
 .grupo{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 40px;
+    margin-bottom: 40px;
 }
 .produto {
     position: relative;
-    width: 300px;
+    width: 100%;
     height: 380px;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+/* Card sobe levemente e ganha sombra mais forte ao passar o mouse */
+.produto:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transform: translateY(-4px);
 }
 .produto img {
     position: absolute;
@@ -131,25 +161,24 @@ legend{
     object-fit: cover;
     transition: transform 0.3s ease;
 }
-/* Imagem única do produto */
 .img-principal {
     opacity: 1;
 }
-/* Leve zoom ao passar o mouse (sem troca de imagem) */
 .produto:hover .img-principal {
     transform: scale(1.05);
 }
 .info-produto{
-    text-align: center;
+    text-align: center;      /* Nome/preço são curtos: centralizar é ok */
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding-bottom: 12px;
 }
 .info-produto h3{
     margin: 0;
     font-size: 16px;
     font-weight: 500;
-    color: #060B18;
+    color: #1A1A1A;          /* Cinza-escuro, não preto puro */
 }
 .preco{
     text-align: center;
@@ -158,12 +187,20 @@ legend{
     font-weight: bold;
     color: #944e18;
 }
-.navegador{
-    text-decoration: none;
-    display: flex;
-    gap: 6rem;
-    align-items: center;  
-    margin: 0;
-    padding: 0;
-    margin-left: 100px;
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    main{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    nav ul{
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    header{
+        height: 300px;
+    }
+    h1{ font-size: 32px; }   /* Mantém dentro da faixa em telas pequenas */
+    h2{ font-size: 24px; }
 }
