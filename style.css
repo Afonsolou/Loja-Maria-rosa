@@ -11,6 +11,8 @@ body{
 }
 header{
     color: #D9B08C;
+    padding-top: 90px;   /* espaco para o menu fixo nao cobrir o titulo */
+    box-sizing: border-box;
     background:
         linear-gradient(
             to bottom,
@@ -31,17 +33,24 @@ nav{
     top: 0;
     left: 0;
     background-color: #F5E8E4;
-    padding: 2px;
+    padding: 10px;
     z-index: 9999;
 }
 nav ul{
     display: flex;
-    gap: 5rem;
     align-items: center;
+    justify-content: space-between;  /* logo na esquerda, menu na direita */
     list-style: none;
     margin: 0;
     padding: 0;
-    white-space: nowrap;
+}
+/* Container dos links do menu: itens lado a lado (horizontal) */
+.navegador{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    padding-right: 30px;
 }
 nav img{
     width: 100px;
@@ -57,6 +66,8 @@ footer{
     font-size: 14px;
     background-color: #8F5543;
     color: black;
+    background-color: black;
+    color: #A8B5A2;;
     padding: 0px;
 }
 footer p{
@@ -122,32 +133,23 @@ legend{
 .produto {
     position: relative;
     width: 300px;
-    height: 380px;
+    height: 300px;
     overflow: hidden;
     cursor: pointer;
 }
 .produto img {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 300px;
+    height: 80%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s linear;
 }
-/* Imagem única do produto */
 .img-principal {
     opacity: 1;
 }
-/* Leve zoom ao passar o mouse (sem troca de imagem) */
-.produto:hover .img-principal {
-    transform: scale(1.05);
-}
 .info-produto{
     text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    padding-top: 250px;
 }
 .info-produto h3{
     margin: 0;
@@ -161,13 +163,4 @@ legend{
     font-size: 18px;
     font-weight: bold;
     color: #944e18;
-}
-.navegador{
-    text-decoration: none;
-    display: flex;
-    gap: 6rem;
-    align-items: center;  
-    margin: 0;
-    padding: 0;
-    margin-left: 100px;
 }
