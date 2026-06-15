@@ -11,7 +11,6 @@ body{
 }
 header{
     color: #D9B08C;
-    padding-top: 90px;   /* espaco para o menu fixo nao cobrir o titulo */
     box-sizing: border-box;
     background:
         linear-gradient(
@@ -39,33 +38,30 @@ nav{
 nav ul{
     display: flex;
     align-items: center;
-    justify-content: space-between;  /* logo na esquerda, menu na direita */
     list-style: none;
     margin: 0;
     padding: 0;
 }
-/* Container dos links do menu: itens lado a lado (horizontal) */
+/* Container dos links do menu: itens lado a lado e centralizados na barra */
 .navegador{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 40px;
     list-style: none;
-    padding-right: 30px;
+    margin: 0 auto;          /* empurra o menu para o centro da barra */
+    padding: 0;
 }
 nav img{
     width: 100px;
 }
 main{
-    font-size: 16px;
     background-color: #F8ECEE;
     padding-right: 60px;
     padding-left: 60px;
     color: #6B4F4F;
 }
 footer{
-    font-size: 14px;
-    background-color: #8F5543;
-    color: black;
     background-color: black;
     color: #A8B5A2;;
     padding: 0px;
@@ -84,13 +80,13 @@ a:hover{
     color: #A8B5A2;
 }
 h1{
-    font-size: 36px;
-    padding-top: 40px;
+    padding-top: 100px;   /* posiciona o titulo na faixa escura do topo, abaixo do menu */
+    margin: 0;
     font-family:Arial, Helvetica, sans-serif;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);   /* legibilidade sobre a imagem */
     background-clip: text;
 }
 h2{
-    font-size: 26px;
     text-align: left;
 }
 .ativo{
