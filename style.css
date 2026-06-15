@@ -11,6 +11,8 @@ body{
 }
 header{
     color: #D9B08C;
+    padding-top: 90px;   /* espaco para o menu fixo nao cobrir o titulo */
+    box-sizing: border-box;
     background:
         linear-gradient(
             to bottom,
