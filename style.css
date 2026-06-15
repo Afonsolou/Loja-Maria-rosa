@@ -36,11 +36,19 @@ nav{
 }
 nav ul{
     display: flex;
-    gap: 100px;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;  /* logo na esquerda, menu na direita */
     list-style: none;
     margin: 0;
     padding: 0;
+}
+/* Container dos links do menu: itens lado a lado (horizontal) */
+.navegador{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    padding-right: 30px;
 }
 nav img{
     width: 100px;
